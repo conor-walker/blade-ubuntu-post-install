@@ -7,7 +7,7 @@ sudo add-apt-repository ppa:linuxuprising/apps
 
 sudo apt update
 
-sudo apt install openrazer-meta polychromatic tlpui spotify steam lutris thermald tlp tlpui guake gnome-tweaks refind
+sudo apt install openrazer-meta polychromatic tlpui spotify-client steam lutris thermald tlp tlpui guake gnome-tweaks refind
 
 sudo apt dist-upgrade
 
