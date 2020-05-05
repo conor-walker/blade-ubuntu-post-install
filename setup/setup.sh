@@ -15,7 +15,10 @@ sudo apt dist-upgrade
 
 #Copy files from intel-undervolt repository for undervolting processor, configure & make
 git clone https://github.com/kitsunyan/intel-undervolt
-sudo ./configure --systemd && make && make install
+cd intel-undervolt
+sudo ./configure --systemd
+sudo make
+sudo make install
 
 #read current voltages to ensure its been set up right
 sudo intel-undervolt read
@@ -24,3 +27,7 @@ sudo intel-undervolt read
 #There's probably a quick way to do it but I'm lame so I would edit the conf file in nano:
 #sudo nano /etc/intel-undervolt.conf
 #-130 on CPU & CPU Cache and -40 on GPU is a good start
+#Once set, run
+#sudo intel-undervolt apply
+#sudo intel-undervolt read #to check it has applied!
+#sudo systemctl enable intel-undervolt.service --now
