@@ -7,7 +7,7 @@ sudo add-apt-repository ppa:linuxuprising/apps
 
 sudo apt update
 
-sudo apt install openrazer-meta polychromatic tlpui spotify-client steam lutris thermald tlp tlpui guake gnome-tweaks refind
+sudo apt install openrazer-meta polychromatic tlpui spotify-client steam lutris thermald tlp tlpui guake gnome-tweaks #refind
 
 sudo apt dist-upgrade
 
@@ -16,9 +16,7 @@ sudo apt dist-upgrade
 #Copy files from intel-undervolt repository for undervolting processor, configure & make
 git clone https://github.com/kitsunyan/intel-undervolt
 cd intel-undervolt
-sudo ./configure --systemd
-sudo make
-sudo make install
+sudo ./configure --systemd && make && make install
 
 #read current voltages to ensure its been set up right
 sudo intel-undervolt read
